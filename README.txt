@@ -1,4 +1,4 @@
-C++ OOP - Project
+C++ OOP - Course Project
 Remake of a "Lode Runner" style game
 
 This project is an implementation of the game Lode Runner.
@@ -85,8 +85,11 @@ The game board is stored in a unique_ptr two-dimensional vector that points on S
 In the same way, there is such a vector that holds in it the enemies of all kinds.
 
 Notable algorithms:
-Smart Enemy algorithm -
+Smart enemy movement algorithm - gets the knight's current position on the board, it calculates the distance of the smart enemy from the knight according to horizontal and vertical distance.
+First, it checks if the enemy is in the same line as the knight, and then checks which of the distances is shorter and according to this, it decides whether its movement will be horizontal or vertical (up, down, right, or left), considering the limitations of movement in the board.
 
+Known bugs:
+The smart enemy "shakes" while the knight is not moving, and in the transition from a ladder to a rope.
 Stage file format:
 Each stage will be received from a separate fixed name format file- numberlevel. For example, the name of the first stage file is "1", etc.
 These files should be of txt type.
